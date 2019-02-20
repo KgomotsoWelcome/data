@@ -1,14 +1,23 @@
+/*****************************************************************
+* Basic driver file
+* Author: Kgomotso Welcome
+* Date: 19/02/2019
+******************************************************************/
+
+
 #include <iostream>
 #include <string>
-#include <cstdlib>
+#include "database.h"
 
+using namespace WLCKGO001;
 using namespace std;
 
 int main(){
-
+ 
 	string input; 
-	cout << "####################### Welcome to the student Database. ###################" << endl;
 
+	cout << "*********************** Welcome to the student Database. *********************" << endl;
+	
 	for(;;){
 
 		cout << "Enter a number (or q to quit) and press return." << endl;
@@ -20,30 +29,33 @@ int main(){
 		cout << "q. Quit" << endl;
 
 		cin >> input;
+		clear();
+
 		if (input == "0"){
-			cout << "function addStudent() was called." << endl;
+			addStudent();
 
 		}else if(input == "1"){
-		cout << "function readDatabase() was called." << endl;
+		cout << "function readDatabase() was called." << endl << endl;
 		
 		}else if(input == "2"){
-		cout << "function SaveDatabase() was called." << endl;
+			saveDatabase();
 		
 		}else if(input == "3"){
-		cout << "function displayStudentData() was called." << endl;
+		cout << "function displayStudentData() was called." << endl << endl;
 		
 		}else if(input == "4"){
-		cout << "function studentGrade() was called." << endl;
+		cout << "function studentGrade() was called." << endl << endl;
 		
 		}else if(input == "q"){
 			break;
-		
-		cout << "########################################################################" << endl;
-
 		}
+
+		cout << "****************** Please select another option. *************************" << endl;
+	
 	}
 
+	
 	return 0;
 }
 
-void clear(void) { system("clear"); }
+
