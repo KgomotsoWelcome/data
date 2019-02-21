@@ -35,7 +35,7 @@ int main(){
 			addStudent();
 
 		}else if(input == "1"){
-		cout << "function readDatabase() was called." << endl << endl;
+			readDatabase();
 		
 		}else if(input == "2"){
 			saveDatabase();

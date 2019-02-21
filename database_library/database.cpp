@@ -9,6 +9,8 @@
 #include <vector>
 #include <cstring>
 #include <fstream>
+#include <string>
+#include <exception>
 
 using namespace std;
 
@@ -41,23 +43,39 @@ void WLCKGO001 :: addStudent() {
 	};
 
 	void WLCKGO001 :: saveDatabase(){
-		//ifstream databasefile("database.txt");
+		cout << "function saveDatabase() was called." << endl << endl;
+	
 		ofstream databasefile;
 		databasefile.open("database.txt");
-		//databasefile << "Kgomotso"<< endl;
+		if (databasefile.is_open()) {
 
-		/**for (auto i : studentsDatabase) 
-    		std::cout << studentsDatabase[i] << '\t';
-		std::cout << '\n';
+			for(unsigned int i=0; i<studentsDatabase.size(); i++){
+				string numberStudent = studentsDatabase.at(i).studentNumber;
+				string nameStudent = studentsDatabase.at(i).studentName;
+				string surnameStudent = studentsDatabase.at(i).studentSurname;
+				string classRecordStudent = studentsDatabase.at(i).classRecord;
+				string studentDetails = numberStudent +" "+ nameStudent +" "+ surnameStudent +" "+ classRecordStudent+'\n';
+				databasefile << studentDetails;
+			};
 
-		
-	
-		for(unsigned int i=0; i<studentsDatabase.size(); i++)
-			databasefile << studentsDatabase[i] << endl;
-			**/
-		for(auto&& x: studentsDatabase) 
-			databasefile << studentsDatabase[x] << endl;
 		databasefile.close();
 
+        }else{
+
+            cout <<"Couldn't open file";
+        }
 	};
+
+	void WLCKGO001 :: readDatabase(){
+		cout << "function readDatabase() was called." << endl << endl;
+		ifstream file("database.txt");
+		std::string line;
+		if(file.is_open()){
+	    	while (getline(file, line)) {
+		        std::cout << line << '\n';
+		    }
+		    file.close();
+	    }
+
+	}
 
