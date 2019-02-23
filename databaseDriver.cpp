@@ -3,8 +3,6 @@
 * Author: Kgomotso Welcome
 * Date: 19/02/2019
 ******************************************************************/
-
-
 #include <iostream>
 #include <string>
 #include "database.h"
@@ -26,6 +24,7 @@ int main(){
 		cout << "2. Save database" << endl;
 		cout << "3. Display given student data" << endl;
 		cout << "4. Student Grade" << endl;
+		cout << "5. Create vector" << endl;
 		cout << "q. Quit" << endl;
 
 		cin >> input;
@@ -41,20 +40,20 @@ int main(){
 			saveDatabase();
 		
 		}else if(input == "3"){
-		cout << "function displayStudentData() was called." << endl << endl;
+			displayStudentData();
 		
 		}else if(input == "4"){
-		cout << "function studentGrade() was called." << endl << endl;
+			studentGrade();
+		
+		}else if(input == "5"){
+			createDatabaseVector();
 		
 		}else if(input == "q"){
 			break;
 		}
 
 		cout << "****************** Please select another option. *************************" << endl;
-	
 	}
-
-	
 	return 0;
 }
 

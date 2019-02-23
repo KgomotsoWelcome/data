@@ -16,4 +16,3 @@ run:
 clean:
 	@rm -f *.o
 	@rm databaseDriver
-	@rm database.txt

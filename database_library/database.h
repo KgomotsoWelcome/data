@@ -27,6 +27,7 @@ namespace WLCKGO001{
 	void saveDatabase();
 	void displayStudentData();
 	void studentGrade();
+	void createDatabaseVector();
 }
 
 #endif 
