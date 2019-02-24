@@ -2,6 +2,7 @@
 * Header file for the databaseDriver
 * Author: Kgomotso Welcome
 * Date: 19/02/2019
+* Date completed: 24/02/2019
 ******************************************************************/
 
 #ifndef _DATABASE_H

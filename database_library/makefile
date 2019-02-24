@@ -1,4 +1,10 @@
-#FLAGS
+#*****************************************************************
+# makefile used to compile the database.cpp and header file
+# Author: Kgomotso Welcome
+# Date: 19/02/2019
+# Date completed: 24/02/2019
+#*****************************************************************
+
 CC=g++
 CK=-std=c++11
 CT=-fPIC
